@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Caucasian+Albanian&family=Noto+Sans+JP:wght@100..900&family=Noto+Znamenny+Musical+Notation&family=Padauk:wght@400;700&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Uncial+Antiqua&display=swap');
+*{
+  font-family: "Noto Sans Caucasian Albanian", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html{
+    scroll-behavior: smooth;
+}
+header {
+    background-color: gainsboro;
+    position: fixed;
+    width: 100%; /* Ajoute ceci pour prendre toute la largeur */
+    top: 0;      /* Assure que la barre colle bien en haut */
+    left: 0;     /* Assure que la barre colle bien à gauche */
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%; /* Changez 200px par 10% pour que ce soit plus flexible */
+}
+.logo{
+    text-decoration: none;
+    color: navy;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+.navigation a{
+    color: navy;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-left: 30px;
+
+}
+.navigation a:hover{
+    color: blueviolet;
+}
+section{
+    padding: 100px 200px;
+}
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    
+    /* On combine l'image avec un voile sombre pour lire le texte */
+    background: url(images/back.jpeg) no-repeat;
+    background-size: cover;      
+    background-position: right; 
+    background-attachment: fixed;
+}
+
+.main h2{
+    color: aliceblue;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+.main h1 span{
+    display: inline-block;
+    margin-top: 10px;
+    color: blue;
+    font-size: 2em;
+    font-weight: 600;
+
+}
+.main h3{
+    color: aliceblue;
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.main-btn {
+    color: aliceblue;
+    background-color: blue;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    transition: 0.7s ease;
+}
+.main-btn:hover {
+    background-color: blue;
+    transform: scale(1.1);
+}
+.social-icons a {
+    color: aliceblue; /* Un bleu visible */
+    font-size: 2em; /* Un peu plus grand */
+    padding-right: 25px;
+    text-decoration: none;
+    display: inline-block; /* Très important pour que l'espacement marche */
+    position: relative; 
+    z-index: 10; /* Force l'affichage par-dessus le fond */
+    transition: 0.4s ease;
+}
+
+.social-icons a:hover {
+    color: aliceblue;
+    transform: translateY(-5px); /* Petit saut vers le haut au survol */
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0.2rem;
+}
+#about ,
+#Skills,
+#projects {
+    padding: 6rem 0;
+    background-size: cover; 
+}
+#about h2, 
+#Skills h2,
+#projects h2,
+#contact h2 {
+    text-align: center;
+    font-size: 38px;
+    color: navy;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-size:cover;
+}
+#about hr, 
+#Skills hr,
+#projects hr {
+    width: 100px;
+    height: 3px;
+    background-color: navy;
+    border: none;
+    margin: 5px auto 0;
+
+}
+#about .about-content{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 3rem;
+}
+#about .about-content .coll-1 h3{
+    font-size: 28px;
+    color: navy;
+    margin-bottom: 20px;
+
+}
+#about .about-content .coll-1 P{
+    color: black;
+    margin-bottom: 20px;
+}
+#about .about-content .coll-2 P{
+    color: black;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+#Skills{
+    background-color: midnightblue;
+    background-size: cover; 
+}
+#Skills h2,
+#projects h2 {
+    color: #ddd;
+    font-family: "Noto Sans Caucasian Albanian", sans-serif;
+}
+#Skills .skills-content{
+    margin-top: 2rem;
+    background-color:navy;
+}
+#Skills .skills-content .row{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    text-align: center;
+}
+#Skills .skills-content .row .item {
+    color: #ddd;
+    background-color: black;
+    margin: 20px;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    display:flow-root;
+    transition: all 0.3s ease;
+}
+#Skills .skills-content .row .item:hover{
+    box-shadow: 10px 10px 10px black;
+}
+#Skills .skills-content .row .item:nth-child(3) img{
+    max-width: 80px;
+}
+#Skills .row img {
+    max-width: 40px;
+    height: 50px;
+}
+/* 1. Reset des marges par défaut (à mettre tout en haut du fichier) */
+#projects {
+    background-color: navy;
+    margin-top: 50px; /* Cela crée l'espace extérieur entre les deux sections */
+    padding-top: 20px; /* Optionnel : espace à l'intérieur du bloc bleu */
+}
+#projects .row{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+#projects .row .item {
+    background-color: #ddd;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* S'aligne sur le plus grand cadre de la ligne */
+    transition: all0.3s ease;
+}
+#projects .row .item:hover{
+    transform: scale(1.03);
+}
+
+#projects .row .item img {
+    width: 100%;
+    height: 200px;             /* FIXE : toutes les images auront cette hauteur */
+    object-fit: cover;         /* Coupe l'image proprement sans la déformer */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#contact .row img {
+    width: 100%;
+    max-width: 450px;          /* Empêche l'image de devenir géante */
+    height: auto;
+    border-radius: 10px;
+}
+
+#contact .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Garde l'image et le formulaire côte à côte */
+    align-items: center;            /* Centre verticalement les deux */
+    gap: 20px;
+}
+#projects .row .item .item-content h3 {
+    font-size: 20px;
+    color:midnightblue;
+    margin-top: 10px;
+}
+#projects .row .item .item-content a {
+    font-size: 14px;
+    color: navy;
+    font-weight: 500;
+}
+#contact {
+    padding: 4rem 0;
+    background-color: azure;
+    margin-top: 50px; /* Cela crée l'espace extérieur entre les deux sections */
+    padding-top: 20px;
+}
+#contact .row {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: #fff;
+    column-gap: 2rem;
+    box-shadow: 3px 3px 20px rgba(0,0,0,0.2);
+    padding: 2rem 3rem;
+    border-radius: 10px;
+}
+#contact .row input,
+#contact .row textarea {
+    display: block;
+    width: 100;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #00f4ab0c;
+    outline: none;
+    border: 1px solid #ddd;
+
+}
